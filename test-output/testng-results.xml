@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="16" passed="14" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-25T17:01:30 IST" name="Default suite" finished-at="2025-07-25T17:06:24 IST" duration-ms="294312">
+    <groups>
+    </groups>
+    <test started-at="2025-07-25T17:01:30 IST" name="Default test" finished-at="2025-07-25T17:06:24 IST" duration-ms="294312">
+      <class name="tests.AI_AgentListTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:01:30 IST" name="launchBrowser" finished-at="2025-07-25T17:01:32 IST" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="login()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:01:32 IST" name="login" finished-at="2025-07-25T17:01:36 IST" duration-ms="4196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="openAiAgentsListForm()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:01:36 IST" name="openAiAgentsListForm" finished-at="2025-07-25T17:01:37 IST" depends-on-methods="tests.AI_AgentListTest.login" duration-ms="830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAiAgentsListForm -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:01:37 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:05 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="28344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[All Channels]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:05 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:10 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="4519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Telephony]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:10 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:15 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="5278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Web Widget]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:15 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:21 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="6325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chat Bot]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:21 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:29 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="7391" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RCS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:29 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:37 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="8411" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[WhatsApp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:37 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:47 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="9439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Instagram]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:47 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:02:57 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="10407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Messenger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:02:57 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:03:09 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="12294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Twitter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="selectEachFilterOptionsOneByOne2(java.lang.String)[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:03:09 IST" name="selectEachFilterOptionsOneByOne2" data-provider="filterOptions" finished-at="2025-07-25T17:03:22 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="12308" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LinkedIn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachFilterOptionsOneByOne2 -->
+        <test-method signature="verifyAIAgentsListTabWorkingorNot()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:03:22 IST" name="verifyAIAgentsListTabWorkingorNot" description="Verify On click every Tab agents details showing or not" finished-at="2025-07-25T17:05:41 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="139016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAIAgentsListTabWorkingorNot -->
+        <test-method signature="verifyHorizontalTabLists()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:05:41 IST" name="verifyHorizontalTabLists" finished-at="2025-07-25T17:05:41 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHorizontalTabLists -->
+        <test-method signature="verifyRecordCountBasedOnSelectedChannelInFilter()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:05:41 IST" name="verifyRecordCountBasedOnSelectedChannelInFilter" finished-at="2025-07-25T17:06:03 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="22509" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@class,"ant-select-single")] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Biraju\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60680/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1787566f9be6c0ba6d37f2b5a5a1528d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@class,"ant-select-single")] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Biraju\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60680/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1787566f9be6c0ba6d37f2b5a5a1528d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utility.Util.onClick(Util.java:26)
+at utility.Util.selectValueFromDropDownList(Util.java:65)
+at pages.AiAgentsListPage.verifySearchFilter(AiAgentsListPage.java:115)
+at tests.AI_AgentListTest.verifyRecordCountBasedOnSelectedChannelInFilter(AI_AgentListTest.java:63)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRecordCountBasedOnSelectedChannelInFilter -->
+        <test-method signature="verifylegendsButtonStatus()[pri:0, instance:tests.AI_AgentListTest@4803b726]" started-at="2025-07-25T17:06:03 IST" name="verifylegendsButtonStatus" finished-at="2025-07-25T17:06:24 IST" depends-on-methods="tests.AI_AgentListTest.openAiAgentsListForm" duration-ms="20479" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,"ant-select-single")] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Biraju\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60680/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1787566f9be6c0ba6d37f2b5a5a1528d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,"ant-select-single")] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Biraju\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60680/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1787566f9be6c0ba6d37f2b5a5a1528d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.AiAgentsListPage.selectEachFilterOptionsOneByOne(AiAgentsListPage.java:126)
+at pages.AiAgentsListPage.verifylegendsButton(AiAgentsListPage.java:220)
+at tests.AI_AgentListTest.verifylegendsButtonStatus(AI_AgentListTest.java:85)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifylegendsButtonStatus -->
+      </class> <!-- tests.AI_AgentListTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
