@@ -32,7 +32,7 @@ public class AI_AgentListTest {
 	@Test
 	public void login() throws InterruptedException {
 		loginPage = new LoginPage(driver);
-		loginPage.loginIntoApplication("rajesh@gmail.com", "Admin@1234");
+		loginPage.loginIntoApplication("admin","rajesh@gmail.com", "Admin@1234");
 
 	}
 

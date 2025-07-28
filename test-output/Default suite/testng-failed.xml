@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AI_AgentListTest">
+      <class name="tests.HorizontalMenusTest">
         <methods>
+          <include name="verifyhorizontalMenusListBasedOnRole" invocation-numbers="1 2"/>
           <include name="launchBrowser"/>
-          <include name="verifylegendsButtonStatus"/>
-          <include name="openAiAgentsListForm"/>
-          <include name="login"/>
-          <include name="verifyRecordCountBasedOnSelectedChannelInFilter"/>
         </methods>
-      </class> <!-- tests.AI_AgentListTest -->
+      </class> <!-- tests.HorizontalMenusTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

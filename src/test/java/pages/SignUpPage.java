@@ -36,7 +36,17 @@ public class SignUpPage extends Util {
 		return signUpPage;
 	}
 
-	public SignUpPage signUP(String emailAddress, String password, String plantype) throws InterruptedException {
+	public SignUpPage signUP(String password, String plantype) throws InterruptedException {
+		waitTillElementPresent(CREATE_YOUR_ACCOUNT_HEADER_LOCATOR);
+		enterTextInto(EMAIL_ADDRESS_LOCATOR, Util.generateRandomEmailText(7));
+		enterTextInto(PASSWORD_ADDRESS_LOCATOR, password);
+		selectPlanTypeByChoice(plantype);
+		onClick(SIGN_UP_BUTTON_LOCATOR);
+		SignUpPage signUpPage = new SignUpPage(driver);
+		return signUpPage;
+	}
+	
+	public SignUpPage signUPwithAllreadyExistsUser(String emailAddress,String password, String plantype) throws InterruptedException {
 		waitTillElementPresent(CREATE_YOUR_ACCOUNT_HEADER_LOCATOR);
 		enterTextInto(EMAIL_ADDRESS_LOCATOR, emailAddress);
 		enterTextInto(PASSWORD_ADDRESS_LOCATOR, password);
@@ -61,13 +71,15 @@ public class SignUpPage extends Util {
 		return this;
 	}
 
-	public String getRequiredFieldMessageForEmail() throws InterruptedException {
+	public String getRequiredFieldMessageForEmail(String plantype) throws InterruptedException {
+		selectPlanTypeByChoice(plantype);
 		onClick(SIGN_UP_BUTTON_LOCATOR);
 		String emailError = getTextFrom(EMAIL_REQUIRED_FIELD_VALIDATION_MESSAGE);
 		return emailError;
 	}
 
-	public String getRequiredFieldMessageForPassword() throws InterruptedException {
+	public String getRequiredFieldMessageForPassword(String plantype) throws InterruptedException {
+		selectPlanTypeByChoice(plantype);
 		onClick(SIGN_UP_BUTTON_LOCATOR);
 		String passwordError = getTextFrom(PASSWORD_REQUIRED_FIELD_VALIDATION_MESSAGE);
 		return passwordError;

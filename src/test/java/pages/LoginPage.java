@@ -32,7 +32,7 @@ public class LoginPage extends Util {
 		this.driver = driver;
 	}
 
-	public LoginPage loginIntoApplication(String email, String password) {
+	public LoginPage loginIntoApplication(String role, String email, String password) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_ADDRESS_LOCATOR)).sendKeys(email);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_LOCATOR)).sendKeys(password);

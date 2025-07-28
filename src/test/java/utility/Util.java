@@ -27,9 +27,18 @@ public class Util {
 	}
 
 	public void enterTextInto(By locator, String textToEnter) {
-		clearTextFromTextBox(locator);
-		wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(textToEnter);
+	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+	    // Clear the text box
+	    element.clear();
+
+	    // Wait until the text box is actually empty
+	    wait.until(driver -> element.getAttribute("value").isEmpty());
+
+	    // Enter the desired text
+	    element.sendKeys(textToEnter);
 	}
+
 
 	public void clearTextFromTextBox(By locator) {
 		WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))

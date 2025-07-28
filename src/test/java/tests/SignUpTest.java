@@ -28,28 +28,29 @@ public class SignUpTest {
 
 	}
 
-	@Test(description = "verify signUp User Functionality", priority = 2)
-	public void verify_signUp_User_Functionality() throws InterruptedException {
-		signUpPage.signUP("vibha@gmail.com", "Admin@1234", "Agency");
-		//Assert.assertTrue(signUpPage.getWarningMessage().isBlank(), "Failed to create account");
+	@Test(description = "verify signUp User Functionality", priority = 2, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
+	public void verify_signUp_User_Functionality(String planType) throws InterruptedException {
+		signUpPage.signUP("Admin@1234", planType);
+		 Assert.assertTrue(signUpPage.getWarningMessage().isBlank(), "Failed to create account");
 	}
 
-	@Test(description = "verify warining message if user not signUp successfully", priority = 1)
-	public void verify_warining_message_if_user_not_signUp_successfully() throws InterruptedException {
-		signUpPage.signUP(Util.generateRandomEmailText(7), "Admin@1234", "Agency");
+	@Test(description = "verify warining message if user not signUp successfully", priority = 1, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
+	public void verify_warining_message_if_user_not_signUp_successfully(String planType) throws InterruptedException {
+		signUpPage.signUP("Admin@1234", planType);
 		Assert.assertEquals(signUpPage.getWarningMessage(), "Failed to create account");
 	}
 
-	@Test(description = "verify validation if user already exists", priority = 0)
-	public void verify_validation_if_user_already_exists() throws InterruptedException {
-		signUpPage.signUP("vibha@gmail.com", "Admin@1234", "Agency");
+	@Test(description = "verify validation if user already exists", priority = 0, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
+	public void verify_validation_if_user_already_exists(String planType) throws InterruptedException {
+		signUpPage.signUPwithAllreadyExistsUser("vibha@gmail.com", "Admin@1234", planType);
 		Assert.assertEquals(signUpPage.getWarningMessageForUserAlreadyRegistered(), "User already registered");
 	}
 
-	@Test(description = "verify validation if user dont enter any username and password", priority = -1)
-	public void verify_validation_if_user_dont_enter_any_username_password() throws InterruptedException {
-		Assert.assertEquals(signUpPage.getRequiredFieldMessageForEmail(), "Email is required");
-		Assert.assertEquals(signUpPage.getRequiredFieldMessageForPassword(), "Password is required");
+	@Test(description = "verify validation if user dont enter any username and password", priority = -1, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
+	public void verify_validation_if_user_dont_enter_any_username_password(String plantype)
+			throws InterruptedException {
+		Assert.assertEquals(signUpPage.getRequiredFieldMessageForEmail(plantype), "Email is required");
+		Assert.assertEquals(signUpPage.getRequiredFieldMessageForPassword(plantype), "Password is required");
 	}
 
 	@AfterClass(enabled = true)

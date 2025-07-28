@@ -36,7 +36,7 @@ public class BotGenerationTest {
 		driver.get("https://platform.fonada.ai/login");
 		loginPage = new LoginPage(driver);
 		dashboardPage = new DashboardPage(driver);
-		loginPage.loginIntoApplication("rajesh@gmail.com", "Admin@1234");
+		loginPage.loginIntoApplication("admin","rajesh@gmail.com", "Admin@1234");
 	}
 
 	@Test(retryAnalyzer = com.ui.listenters.MyRetryAnalyzer.class, enabled = false)

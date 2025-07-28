@@ -33,19 +33,19 @@ public class LoginTest {
 	@Test(description = "Verify if user is able to login with Invalid Credentials", priority = 1)
 	public void loginIntoAplicationWithInvalidCredentials() throws InterruptedException {
 
-		Assert.assertEquals(homePage.clickOnsignInlink().loginIntoApplication("rajesh@gmail.com", "Admin@123")
+		Assert.assertEquals(homePage.clickOnsignInlink().loginIntoApplication("admin","rajesh@gmail.com", "Admin@123")
 				.getLoginCredentialsWarningMessage(), "Invalid login credentials");
 	}
 
 	@Test(description = "Verify if user is able to login with valid Credentials or not", priority = 2)
 	public void loginIntoAplication() throws InterruptedException {
-		homePage.clickOnsignInlink().loginIntoApplication("rajesh@gmail.com", "Admin@1234");
+		homePage.clickOnsignInlink().loginIntoApplication("admin","rajesh@gmail.com", "Admin@1234");
 		Assert.assertTrue(dashboardPage.getLoggedInUserName("rajesh").equalsIgnoreCase("rajesh"));
 	}
 
 	@Test(description = "verify validation if user don't enter any username and password", priority = 0)
 	public void verify_validation_if_user_dont_enter_any_username_password() throws InterruptedException {
-		loginPage = homePage.clickOnsignInlink().loginIntoApplication("", "");
+		loginPage = homePage.clickOnsignInlink().loginIntoApplication("admin","", "");
 		Assert.assertEquals(loginPage.getRequiredFieldMessage("email"), "Email is required");
 		Assert.assertEquals(loginPage.getRequiredFieldMessage("password"), "Password is required");
 	}
