@@ -7,7 +7,9 @@
 			<class name="tests.LoginTest" />
 			<class name="tests.BotGenerationTest" />
 			<class name="tests.AI_AgentListTest" />
-
+			<class name="tests.HorizontalMenusTest" />
+			<class name="tests.VerticalMenusTest" />
+			<class name="tests.RCS_PlatformTest" />
 		</classes>
 	</test> <!--
 	Test -->

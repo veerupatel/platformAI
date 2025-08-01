@@ -6,6 +6,8 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -83,5 +85,12 @@ public class AI_AgentListTest {
 	public void verifylegendsButtonStatus() throws InterruptedException {
 		agentsListPage = new AiAgentsListPage(driver);
 		agentsListPage.verifylegendsButton("Chat Bot");
+	}
+	
+	@AfterClass(enabled = true)
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 }

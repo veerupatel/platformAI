@@ -28,7 +28,7 @@ public class AiAgentsListPage extends Util {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
-	private final By CREATE_NEW_BOT_LOCATOR = By.xpath("//span[text()=\"Create New Bot\"]");
+	private final By CREATE_NEW_BOT_LOCATOR = By.xpath("//span[text()=\"Create Agent\"]");
 	private final By AGENTS_HANDCROMB_LOCATOR = By.xpath("//span[text()=\"agents\"]");
 	private final By AI_AGENTS_LIST_LOCATOR = By.xpath("//div[text()=\"AI Agents\" and @role=\"tab\"]");
 	private final By PLAYGROUND_LOCATOR = By.xpath("//div[text()=\"Playground\" and @role=\"tab\"]");
@@ -57,9 +57,8 @@ public class AiAgentsListPage extends Util {
 	private final By LEGENDS_BASED_ON_CHANNEL_TYPE_LOCATOR = By.xpath(
 			"(//div[contains(@class,'ant-card-body')]//span[contains(normalize-space(), 'Chat Bot')])[1]//following::div[4]//button//span[@role=\"img\"]");
 
-	public CreateNewBOT clickOnCreatenewBotButton() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(CREATE_NEW_BOT_LOCATOR)).click();
+	public CreateNewBOT clickOnCreatenewBotButton() throws InterruptedException {
+		onClick(CREATE_NEW_BOT_LOCATOR);
 		createNewBOT = new CreateNewBOT(driver);
 		return createNewBOT;
 	}

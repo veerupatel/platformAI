@@ -14,6 +14,7 @@ public class LoginPage extends Util {
 	private WebDriver driver;
 	WebDriverWait wait;
 	SignUpPage signUpPage;
+	DashboardPage dashboardPage;
 
 	private final By EMAIL_ADDRESS_LOCATOR = By.xpath("//input[@name=\"email\"]");
 	private final By PASSWORD_LOCATOR = By.xpath("//input[@name=\"password\"]");
@@ -26,17 +27,30 @@ public class LoginPage extends Util {
 	private final By EMAIL_REQUIRED_FIELD_VALIDATION_MESSAGE = By
 			.xpath("//input[@name='email']/following-sibling::p[contains(text(),'required')]");
 	private final By FORGET_PASSWORD_BUTTON_LINK_LOCATOR = By.partialLinkText("Forgot your password?");
+	private final By CONTINUE_WITH_GMAIL_LOCATOR = By.cssSelector("button img[alt='Google']");
+	private final By CHOOSE_AN_ACCOUNT_LOCATOR = By.cssSelector("div[jsname='MBVUVe']");
+	private final By CONTINUE_BUTTON_LOCATOR = By.xpath("//button[contains(.,'Continue')]");
+	private final By EMAIL_OR_PHONE_TEXTBOX_LOCATOR = By.xpath("//input[@type='email']");
+	private final By NEXT_BUTTON_LOCATOR = By.xpath("//span[text()='Next']");
+	private final By EMAIL_PASSWORD_TEXTBOX_LOCATOR = By.xpath("//input[@type='password']");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 	}
 
-	public LoginPage loginIntoApplication(String role, String email, String password) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_ADDRESS_LOCATOR)).sendKeys(email);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_LOCATOR)).sendKeys(password);
-		wait.until(ExpectedConditions.elementToBeClickable(SIGN_IN_LOCATOR)).click();
+	public DashboardPage dologinWith(String role, String email, String password) throws InterruptedException {
+		enterTextInto(EMAIL_ADDRESS_LOCATOR, email);
+		enterTextInto(PASSWORD_LOCATOR, password);
+		onClick(SIGN_IN_LOCATOR);
+		dashboardPage = new DashboardPage(driver);
+		return dashboardPage;
+	}
+	
+	public LoginPage loginIntoApplication(String role, String email, String password) throws InterruptedException {
+		enterTextInto(EMAIL_ADDRESS_LOCATOR, email);
+		enterTextInto(PASSWORD_LOCATOR, password);
+		onClick(SIGN_IN_LOCATOR);
 		return this;
 	}
 
@@ -77,6 +91,23 @@ public class LoginPage extends Util {
 		}
 
 		return getTextFrom(validationLocator);
+	}
+
+	public String loginIntoApplicationByUsingGmailAccount(String email, String password) throws InterruptedException {
+
+		onClick(CONTINUE_WITH_GMAIL_LOCATOR);
+		enterTextInto(EMAIL_OR_PHONE_TEXTBOX_LOCATOR, email);
+		onClick(NEXT_BUTTON_LOCATOR);
+		enterTextInto(EMAIL_PASSWORD_TEXTBOX_LOCATOR, password);
+		onClick(NEXT_BUTTON_LOCATOR);
+		try {
+			onClick(CONTINUE_BUTTON_LOCATOR);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String username;
+		return username = email.split("@")[0];
 	}
 
 }

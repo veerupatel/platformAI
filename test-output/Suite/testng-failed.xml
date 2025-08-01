@@ -7,25 +7,52 @@
         <methods>
           <include name="launchBrowser"/>
           <include name="verifylegendsButtonStatus"/>
+          <include name="selectEachFilterOptionsOneByOne2" invocation-numbers="1"/>
           <include name="openAiAgentsListForm"/>
           <include name="login"/>
+          <include name="tearDown"/>
           <include name="verifyRecordCountBasedOnSelectedChannelInFilter"/>
         </methods>
       </class> <!-- tests.AI_AgentListTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="verifyForgetPasswordLinkButton"/>
+          <include name="loginWithGmailAccount"/>
           <include name="launchBrowser"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->
+      <class name="tests.SignUpTest">
+        <methods>
+          <include name="verify_validation_if_user_already_exists" invocation-numbers="1 2"/>
+          <include name="verify_signUp_User_Functionality" invocation-numbers="0 1 2"/>
+          <include name="launchBrowser"/>
+          <include name="verify_warining_message_if_user_not_signUp_successfully" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.SignUpTest -->
+      <class name="tests.VerticalMenusTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="verifyVerticalMenusListBasedOnRole" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- tests.VerticalMenusTest -->
       <class name="tests.BotGenerationTest">
         <methods>
-          <include name="openCreateNewDynamicBotForm"/>
+          <include name="openCreateNewBotForm" invocation-numbers="0 0 0 0 1 2 3 4"/>
+          <include name="verifyAllBotGeneration" invocation-numbers="0 1 2 3 4"/>
           <include name="launchBrowser"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.BotGenerationTest -->
+      <class name="tests.HorizontalMenusTest">
+        <methods>
+          <include name="verifyhorizontalMenusListBasedOnRole" invocation-numbers="1 2"/>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.HorizontalMenusTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -10,6 +10,7 @@ import pages.AiAgentsListPage;
 import pages.BasicInfoPage;
 import pages.CreateNewBOT;
 import pages.DashboardPage;
+import pages.HomePage;
 import pages.KnowledgeBasePage;
 import pages.LoginPage;
 import pages.ToolsPage;
@@ -27,35 +28,44 @@ public class BotGenerationTest {
 	KnowledgeBasePage knowledgeBasePage;
 	ToolsPage toolsPage;
 	BrowserUtility browserUtility;
+	HomePage homePage;
 
 	@BeforeClass
-	public void launchBrowser() {
+	public void launchBrowser() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "E:\\Browser_driver\\chromedriver-win64\\chromedriver.exe");
 		browserUtility = new BrowserUtility("chrome", false);
 		driver = browserUtility.getDriver();
-		driver.get("https://platform.fonada.ai/login");
+		driver.get("https://platform.fonada.ai/");
 		loginPage = new LoginPage(driver);
 		dashboardPage = new DashboardPage(driver);
-		loginPage.loginIntoApplication("admin","rajesh@gmail.com", "Admin@1234");
+		homePage = new HomePage(driver);
+		agentsListPage = new AiAgentsListPage(driver);
+		homePage.clickOnsignInlink().dologinWith("admin", "rajesh@gmail.com", "Admin@1234");
+	}
+
+	@Test(retryAnalyzer = com.ui.listenters.MyRetryAnalyzer.class, enabled = true, dataProvider = "channelProvider", dataProviderClass = dataproviders.ChannelProvider.class)
+	public void openCreateNewBotForm(String channelName) throws InterruptedException {
+		dashboardPage.clickOnAIAgentsMenu().clickOnCreatenewBotButton().waitTillSelectChannelTextClikable()
+				.selectChannelByChoice(channelName).clickOnContinueInfoButton().WaitTillBasicInfoBoxIsVisibleAndEnable()
+				.fillBasicInfoOfBOT().clickOnNextStepButton().clickOnAgentDeployButton();
+	}
+	
+
+	@Test(retryAnalyzer = com.ui.listenters.MyRetryAnalyzer.class,enabled = true, dataProvider = "channelProvider", dataProviderClass = dataproviders.ChannelProvider.class)
+	public void verifyAllBotGeneration(String channelName) throws InterruptedException {
+		dashboardPage.clickOnAIAgentsMenu().clickOnCreatenewBotButton().waitTillSelectChannelTextClikable()
+				.selectChannelByChoice(channelName).clickOnContinueInfoButton().WaitTillBasicInfoBoxIsVisibleAndEnable()
+				.fillBasicInfoOfBOTDynamic(channelName).clickOnNextStepButton().clickOnAgentDeployButton();
 	}
 
 	@Test(retryAnalyzer = com.ui.listenters.MyRetryAnalyzer.class, enabled = false)
-	public void openCreateNewBotForm() throws InterruptedException {
-		agentsListPage = new AiAgentsListPage(driver);
-		dashboardPage.clickOnAIAgentsMenu().clickOnCreatenewBotButton().waitTillSelectChannelTextClikable()
-				.selectChannel().clickOnContinueInfoButton().WaitTillBasicInfoBoxIsVisibleAndEnable()
-				.fillBasicInfoOfBOT().clickOnNextStepButton().clickOnAgentDeployButton();
-	}
-
-	@Test(retryAnalyzer = com.ui.listenters.MyRetryAnalyzer.class)
 	public void openCreateNewDynamicBotForm(String botname) throws InterruptedException {
-		agentsListPage = new AiAgentsListPage(driver);
 		dashboardPage.clickOnAIAgentsMenu().clickOnCreatenewBotButton().waitTillSelectChannelTextClikable()
-				.selectChannelByChoice(botname).clickOnContinueInfoButton().WaitTillBasicInfoBoxIsVisibleAndEnable()
+				.selectChannelByChoice("Chat Bot").clickOnContinueInfoButton().WaitTillBasicInfoBoxIsVisibleAndEnable()
 				.fillBasicInfoOfBOT().clickOnNextStepButton().clickOnAgentDeployButton();
 	}
 
-	@AfterClass
+	@AfterClass(enabled = false)
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();

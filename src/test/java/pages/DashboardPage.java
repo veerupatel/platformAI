@@ -13,6 +13,7 @@ public class DashboardPage extends Util {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	AiAgentsListPage agentsListPage;
 
 	public DashboardPage(WebDriver driver) {
 		super(driver);
@@ -24,17 +25,15 @@ public class DashboardPage extends Util {
 	private final By OVERVIEW_HANDCROMB_LOCATOR = By.xpath("//span[text()=\"overview\"]");
 
 	public AiAgentsListPage clickOnAIAgentsMenu() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(HORIZONTAL_MENUS_LOCATOR)).click();
-		AiAgentsListPage agentsListPage = new AiAgentsListPage(driver);
+		onClick(HORIZONTAL_MENUS_LOCATOR);
+		agentsListPage = new AiAgentsListPage(driver);
 		return agentsListPage;
 	}
 
 	public String getLoggedInUserName(String username) {
-	    String LOGGED_IN_USER_NAME_LOCATOR = "//span[contains(text(),'" + username + "')]";
-	    By dynamicLocator = By.xpath(LOGGED_IN_USER_NAME_LOCATOR);
-	    return getTextFrom(dynamicLocator);
+		String LOGGED_IN_USER_NAME_LOCATOR = "//span[contains(text(),'" + username + "')]";
+		By dynamicLocator = By.xpath(LOGGED_IN_USER_NAME_LOCATOR);
+		return getTextFrom(dynamicLocator);
 	}
-
 
 }
