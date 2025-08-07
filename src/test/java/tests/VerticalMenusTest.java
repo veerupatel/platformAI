@@ -50,21 +50,20 @@ public class VerticalMenusTest {
 		switch (role.toLowerCase()) {
 		case "user":
 			expectedMenus = Arrays.asList("Dashboard", "Business Overview", "AI Agents", "Agent Builder",
-					"Analytics Config", "WhatsApp Platform", "Campaigns", "Templates", "Social Media", "AI Studio",
-					"Services", "Number Management", "API Keys", "Billing", "Settings");
+					"Analytics Config", "WhatsApp Platform", "Campaigns","Social Media", "AI Studio",
+					"RCS Platform", "Number Management","Platform Connections", "API Keys", "Billing", "Settings","Admin Panel");
 			break;
 
 		case "admin":
 			expectedMenus = Arrays.asList("Dashboard", "Business Overview", "AI Agents", "Agent Builder",
-					"Analytics Config", "WhatsApp Platform", "Campaigns", "Templates", "Social Media", "AI Studio",
-					"Services", "Number Management", "API Keys", "Billing", "Settings", "Admin Panel");
+					"Analytics Config", "WhatsApp Platform", "Campaigns","Social Media", "AI Studio",
+					"RCS Platform", "Number Management","Platform Connections", "API Keys", "Billing", "Settings","Admin Panel");
 			break;
 
 		case "superadmin":
 			expectedMenus = Arrays.asList("Dashboard", "Business Overview", "AI Agents", "Agent Builder",
-					"Analytics Config", "WhatsApp Platform", "Campaigns", "Templates", "Social Media", "AI Studio",
-					"Services", "Number Management", "API Keys", "Billing", "Settings", "Admin Panel",
-					"Super Admin Tools");
+					"Analytics Config", "WhatsApp Platform", "Campaigns","Social Media", "AI Studio",
+					"RCS Platform", "Number Management","Platform Connections", "API Keys", "Billing", "Settings","Admin Panel");
 			break;
 		}
 

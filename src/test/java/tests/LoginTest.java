@@ -85,8 +85,8 @@ public class LoginTest {
 		case "admin":
 		case "superadmin":
 			expectedMenus = Arrays.asList("Dashboard", "Business Overview", "AI Agents", "Agent Builder",
-					"Analytics Config", "WhatsApp Platform", "Campaigns", "Templates", "Social Media", "AI Studio",
-					"Services", "Number Management", "API Keys", "Billing", "Settings", "Admin Panel");
+					"Analytics Config", "WhatsApp Platform", "Campaigns",  "Social Media", "AI Studio",
+					"RCS Platform", "Number Management","Platform Connections", "API Keys", "Billing", "Settings", "Admin Panel");
 			break;
 
 		default:
@@ -104,7 +104,7 @@ public class LoginTest {
 		System.out.println("Actual:   " + actualMenus);
 
 		// Assertion
-		Assert.assertEquals(actualMenus, expectedMenus, "Vertical menu items do not match for role: " + role);
+		Assert.assertEquals(actualMenus, expectedMenus, "Menu items do not match for role: " + role);
 	}
 
 	@AfterMethod(enabled = true)

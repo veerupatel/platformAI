@@ -15,6 +15,7 @@ import pages.LoginPage;
 import pages.RCS_Platform;
 import pages.VerticalMenus;
 import utility.BrowserUtility;
+import utility.Util;
 
 public class RCS_PlatformTest {
 
@@ -37,6 +38,7 @@ public class RCS_PlatformTest {
 		dashboardPage = new DashboardPage(driver);
 		verticalMenus = new VerticalMenus(driver);
 		rcs_Platform = new RCS_Platform(driver);
+
 	}
 
 	@Test
@@ -55,6 +57,9 @@ public class RCS_PlatformTest {
 		rcs_Platform.uploadDocumentsIntoUploadSection("C:\\Users\\Biraju\\Downloads\\pancar.png",
 				"C:\\Users\\Biraju\\Downloads\\pancar.png");
 		rcs_Platform.submitRegistration();
+		Assert.assertEquals(rcs_Platform.rcsRegistrationFailed(),
+				"Registration failed: Cannot read properties of undefined (reading 'brand_name')");
+
 	}
 
 	@AfterClass(enabled = true)

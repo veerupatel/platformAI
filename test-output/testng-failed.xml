@@ -1,58 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AI_AgentListTest">
+      <class name="tests.AdminPanelHomePageTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="verifylegendsButtonStatus"/>
-          <include name="selectEachFilterOptionsOneByOne2" invocation-numbers="1"/>
-          <include name="openAiAgentsListForm"/>
-          <include name="login"/>
-          <include name="tearDown"/>
-          <include name="verifyRecordCountBasedOnSelectedChannelInFilter"/>
+          <include name="verifyAllTabName"/>
         </methods>
-      </class> <!-- tests.AI_AgentListTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="verifyForgetPasswordLinkButton"/>
-          <include name="loginWithGmailAccount"/>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
-      <class name="tests.SignUpTest">
-        <methods>
-          <include name="verify_validation_if_user_already_exists" invocation-numbers="1 2"/>
-          <include name="verify_signUp_User_Functionality" invocation-numbers="0 1 2"/>
-          <include name="launchBrowser"/>
-          <include name="verify_warining_message_if_user_not_signUp_successfully" invocation-numbers="0"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.SignUpTest -->
-      <class name="tests.VerticalMenusTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="launchBrowser"/>
-          <include name="verifyVerticalMenusListBasedOnRole" invocation-numbers="0 1 2"/>
-        </methods>
-      </class> <!-- tests.VerticalMenusTest -->
-      <class name="tests.BotGenerationTest">
-        <methods>
-          <include name="openCreateNewBotForm" invocation-numbers="0 0 0 0 1 2 3 4"/>
-          <include name="verifyAllBotGeneration" invocation-numbers="0 1 2 3 4"/>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.BotGenerationTest -->
-      <class name="tests.HorizontalMenusTest">
-        <methods>
-          <include name="verifyhorizontalMenusListBasedOnRole" invocation-numbers="1 2"/>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.HorizontalMenusTest -->
+      </class> <!-- tests.AdminPanelHomePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

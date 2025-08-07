@@ -37,12 +37,12 @@ public class SignUpTest {
 	@Test(description = "verify warining message if user not signUp successfully", priority = 1, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
 	public void verify_warining_message_if_user_not_signUp_successfully(String planType) throws InterruptedException {
 		signUpPage.signUP("Admin@1234", planType);
-		Assert.assertEquals(signUpPage.getWarningMessage(), "Failed to create account");
+		Assert.assertEquals(signUpPage.getWarningMessage(), "Failed to create account");	
 	}
 
-	@Test(description = "verify validation if user already exists", priority = 0, dataProvider = "PlanOptionsforSignUpUser", dataProviderClass = dataproviders.SignUPDataProvider.class)
-	public void verify_validation_if_user_already_exists(String planType) throws InterruptedException {
-		signUpPage.signUPwithAllreadyExistsUser("vibha@gmail.com", "Admin@1234", planType);
+	@Test(description = "verify validation if user already exists", priority = 0, dataProvider = "dataForSignUpAccount", dataProviderClass = dataproviders.SignUPDataProvider.class)
+	public void verify_validation_if_user_already_exists(String emaildID,String password,String planType) throws InterruptedException {
+		signUpPage.signUPwithAllreadyExistsUser(emaildID, password, planType);
 		Assert.assertEquals(signUpPage.getWarningMessageForUserAlreadyRegistered(), "User already registered");
 	}
 

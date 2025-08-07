@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.RCS_PlatformTest">
+      <class name="tests.AdminPanelHomePageTest">
         <methods>
-          <include name="openRCSListPage"/>
           <include name="launchBrowser"/>
+          <include name="verifyAllTabName"/>
         </methods>
-      </class> <!-- tests.RCS_PlatformTest -->
+      </class> <!-- tests.AdminPanelHomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

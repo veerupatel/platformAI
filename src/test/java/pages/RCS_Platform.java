@@ -48,6 +48,8 @@ public class RCS_Platform extends Util {
 	By GST_CERTIFICATE_LOCATOR = By.xpath("//span[text()=\"Upload GST Certificate\"]");
 	By PAN_CARD_LOCATOR = By.xpath("//span[text()=\"Upload PAN Card\"]");
 	By SUBMIT_REGISTRATION_LOCATOR = By.xpath("//button[normalize-space()=\"Submit Registration\"]");
+	By REGISTRATION_FAILED_ALERT_MESSAGE_LOCATOR = By.xpath(
+			"//span[text()=\"Registration failed: Cannot read properties of undefined (reading 'brand_name')\"]");
 
 	public void fillBrandInformation(String brandName, String industryType, String brandURL, String fileLocaton)
 			throws InterruptedException, AWTException {
@@ -116,8 +118,13 @@ public class RCS_Platform extends Util {
 		uploadDocument(PanfileLocation, PAN_CARD_LOCATOR);
 	}
 
-	public void submitRegistration() throws InterruptedException {
+	public boolean submitRegistration() throws InterruptedException {
 		scrollTillView(SUBMIT_REGISTRATION_LOCATOR);
 		onClick(SUBMIT_REGISTRATION_LOCATOR);
+		return isVisible(SUBMIT_REGISTRATION_LOCATOR);
+	}
+
+	public String rcsRegistrationFailed() {
+		return getTextFrom(REGISTRATION_FAILED_ALERT_MESSAGE_LOCATOR);
 	}
 }

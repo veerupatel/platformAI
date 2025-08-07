@@ -55,11 +55,11 @@ public class HorizontalMenusTest {
 			break;
 
 		case "admin":
-			expectedMenus = Arrays.asList("Create Agent", "Templates Gallery", "Live Dashboard", "Help Center");
+			expectedMenus = Arrays.asList("Create Agent", "Templates Gallery", "Live Dashboard", "Help Center",username);
 			break;
 
 		case "superadmin":
-			expectedMenus = Arrays.asList("Create Agent", "Templates Gallery", "Live Dashboard", "Help Center");
+			expectedMenus = Arrays.asList("Create Agent", "Templates Gallery", "Live Dashboard", "Help Center",username);
 			break;
 		}
 

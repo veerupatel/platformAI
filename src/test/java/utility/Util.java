@@ -153,6 +153,7 @@ public class Util {
 	}
 
 	public String getTextFrom(By locator) {
+		scrollTillView(locator);
 		return waitTillElementPresent(locator).getText();
 
 	}
@@ -211,6 +212,10 @@ public class Util {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
+	}
+
+	public boolean isVisible(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
 	}
 
 }

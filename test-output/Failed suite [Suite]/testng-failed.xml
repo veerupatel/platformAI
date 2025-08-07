@@ -3,6 +3,28 @@
 <suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)(failed)">
     <classes>
+      <class name="tests.VerticalMenusTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="verifyVerticalMenusListBasedOnRole" invocation-numbers="2"/>
+        </methods>
+      </class> <!-- tests.VerticalMenusTest -->
+      <class name="tests.HorizontalMenusTest">
+        <methods>
+          <include name="verifyhorizontalMenusListBasedOnRole" invocation-numbers="1 2"/>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.HorizontalMenusTest -->
+      <class name="tests.BotGenerationTest">
+        <methods>
+          <include name="openCreateNewBotForm" invocation-numbers="0 0 0 0 1 2 3 4"/>
+          <include name="verifyAllBotGeneration" invocation-numbers="0 1 2 3 4"/>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.BotGenerationTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="verifyForgetPasswordLinkButton"/>
@@ -10,13 +32,13 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-      <class name="tests.BotGenerationTest">
+      <class name="tests.SignUpTest">
         <methods>
-          <include name="openCreateNewDynamicBotForm"/>
+          <include name="verify_signUp_User_Functionality" invocation-numbers="0 1 2"/>
           <include name="launchBrowser"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.BotGenerationTest -->
+      </class> <!-- tests.SignUpTest -->
     </classes>
   </test> <!-- Test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Suite]] -->

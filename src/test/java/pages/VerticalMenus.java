@@ -32,6 +32,8 @@ public class VerticalMenus extends Util {
 			System.out.println(desiredMenu.getText().trim());
 			if (desiredMenu.getText().equalsIgnoreCase(optionToSelect)) {
 				Thread.sleep(2000);
+				smoothScrollToElement(desiredMenu);
+				Thread.sleep(2000);
 				desiredMenu.click();
 			}
 		}

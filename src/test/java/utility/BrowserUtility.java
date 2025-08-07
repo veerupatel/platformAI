@@ -39,7 +39,7 @@ public class BrowserUtility {
 			options.addArguments("--disable-infobars");
 			options.addArguments("--disable-extensions");
 			options.addArguments("--disable-blink-features=AutomationControlled");
-
+			//options.addArguments("--window-size=1920,1080");
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("credentials_enable_service", false);
 			prefs.put("profile.password_manager_enabled", false);
